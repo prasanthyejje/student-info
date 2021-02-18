@@ -1,0 +1,81 @@
+$minvpwidth: 780px;
+
+$fontstack: "Raleway", sans-serif;
+
+@mixin label($padding) {
+  position: absolute;
+  top: 0;
+  left: $padding;
+  bottom: 0;
+  right: $padding;
+  user-select: none;
+  font-size: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: lightgray;
+  }
+}
+
+@mixin input($padding) {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: $padding;
+  border: 0;
+  background: none;
+  outline: none;
+  cursor: text;
+}
+
+:root {
+  --body-bg: gainsboro;
+  --view-bg: white;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-size: 1.6rem;
+  font-family: $fontstack;
+  background: var(--body-bg);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  min-width: $minvpwidth;
+  max-width: 1280px;
+  height: 80vh;
+  background: var(--view-bg);
+  border-radius: 12px;
+}
+
+.roster {
+  width: 100%;
+  overflow-y: scroll;
+
+  // For Firefox
+  scrollbar-width: none;
+  // For Chrome
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

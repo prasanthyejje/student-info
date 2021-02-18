@@ -1,0 +1,22 @@
+.search {
+
+  &__bar {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 10px 0 20px 0;
+
+    &__label {
+      @include label(10px);
+    }
+
+    &__input {
+      @include input(10px);
+      font-size: 2rem;
+
+      &:focus ~ .search__bar::after {
+        background: black;
+      }
+    }
+  }
+}

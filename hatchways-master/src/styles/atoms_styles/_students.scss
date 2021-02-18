@@ -1,0 +1,60 @@
+.student {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  // min-width: 780px;
+  padding: 10px 20px;
+  border-bottom: 1px solid lightgray;
+
+  &__picture {
+    min-width: 128px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin: 15px 40px 0 0;
+  }
+
+  &__details {
+    width: 100%;
+    
+    &__name {
+      font-size: 4rem;
+      text-transform: uppercase;
+    }
+
+    &__showmore {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: none;
+      color: darkgray;
+      font-size: 4rem;
+      outline: none;
+
+      &:hover {
+        color: black;
+      }
+
+      &:focus {
+        color: black;
+      }
+    }
+
+    &__information {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    &__detailInfo {
+      margin-bottom: 5px;
+
+    }
+
+    &__testnum {
+      display: inline-block;
+      width: 70px;
+    }
+  }
+}

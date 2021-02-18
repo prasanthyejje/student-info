@@ -1,0 +1,33 @@
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__tag {
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    background: lightgray;
+    border-radius: 6px;
+  }
+}
+
+.addTag {
+  width: 200px;
+
+  &__container {
+    position: relative;
+    margin: 0;
+  }
+    
+  &__label {
+    @include label(0);
+  }
+
+  &__input {
+    @include input(10px);
+
+    &:focus ~ .addTag__label::after {
+      background: black;
+    }
+  }
+}
