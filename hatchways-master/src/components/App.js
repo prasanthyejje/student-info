@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import hatchways from "../hatchway_api/hatchways";
-import Searchbar from "./Searchbar";
-import Student from "./Student";
+import Searchbar from "./SearchView";
+import Student from "./StudentView";
 
 class App extends Component {
   state = {

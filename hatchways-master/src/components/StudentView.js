@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import Testscores from "./Testscores";
-import Tags from "./Tags";
+import Tags from "./TagView";
 
 class Student extends Component {
   state = {
